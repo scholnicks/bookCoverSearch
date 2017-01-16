@@ -1,6 +1,6 @@
 """
-bookCoverSearch takes a book title and single author. GoogleAPIs is searched for the a link to the
-book's cover which is returned as a CoverPhoto object.
+bookCoverSearch takes a book title and single author and returns a link to the book's cover photo. which is returned as a CoverPhoto object. Currently
+only GoogleAPI is searched.
 
 (c) Steve Scholnick <scholnicks@gmail.com>
 MIT License see http://www.scholnick.net/license.txt
@@ -10,12 +10,13 @@ import requests
 import urllib
 import re
 
-__all__ = ['bookCoverSearch']
-__version__ = '0.1.0'
+__all__ = ['bookCoverSearch','CoverPhoto']
+__version__ = '0.2.0'
 
 GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?q="{0}"+inauthor:{1}&printType=books'
 
 class CoverPhoto(object):
+    '''Holds the link to the cover photo or an error'''
     def __init__(self,url=None,error=None):
         self.url   = url
         self.error = error
@@ -30,10 +31,12 @@ NO_MATCHES = CoverPhoto(error="Unable to find any matches")
 
 
 def canonicalForm(s):
+    '''Cleans a string by removing all non-word characters'''
     return "" if not s else re.sub(r'\s*','',s).lower().strip()
 
 
 def bookCoverSearch(title=None,author=None):
+    '''Searches for a book's cover based on a title and a single author'''
     url = GOOGLE_SEARCH_URL.format(urllib.quote_plus(title),urllib.quote_plus(author))
     data = requests.get(url).json()
 

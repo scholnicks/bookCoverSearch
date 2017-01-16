@@ -4,4 +4,5 @@
 from bookCoverSearch import bookCoverSearch
 
 print bookCoverSearch('Cujo','Stephen King')
-print bookCoverSearch('sfdsf','Stephen King')
+print bookCoverSearch(title='Cujo',author='Stephen King')
+print bookCoverSearch('Not Cujo','Not Stephen King')
