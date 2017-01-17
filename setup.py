@@ -11,8 +11,9 @@ setup(
     author_email='scholnicks@gmail.com',
     description="Searches Google's book database and returns a URL for the book cover image",
     license='MIT',
-    keywords='bookCoverSearch',
-    url='http://scholnick.net/bookCoverSearch',
+    keywords=['bookCoverSearch','book','cover','photo'],
+    url='https://github.com/scholnicks/bookCoverSearch',
+    download_url='https://github.com/scholnicks/bookCoverSearch',
     py_modules=['bookCoverSearch'],
     long_description="Searches Google's book database and returns a URL for the book cover image",
     classifiers=[
