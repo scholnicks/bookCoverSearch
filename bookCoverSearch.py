@@ -11,9 +11,9 @@ import urllib
 import re
 
 __all__ = ['bookCoverSearch','CoverPhoto']
-__version__ = '0.2.0'
 
 GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?q="{0}"+inauthor:{1}&printType=books'
+
 
 class CoverPhoto(object):
     '''Holds the link to the cover photo or an error'''

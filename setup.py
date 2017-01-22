@@ -1,23 +1,21 @@
 import sys
 from setuptools import setup
 
-from docopt import __version__
-
 setup(
     name='bookCoverSearch',
-    version=__version__,
-    requires='requests',
+    version=1.0.0,
     author='Steven Scholnick',
     author_email='scholnicks@gmail.com',
     description="Searches Google's book database and returns a URL for the book cover image",
+    long_description="Searches Google's book database and returns a URL for the book cover image",
     license='MIT',
     keywords=['bookCoverSearch','book','cover','photo'],
     url='https://github.com/scholnicks/bookCoverSearch',
     download_url='https://github.com/scholnicks/bookCoverSearch',
     py_modules=['bookCoverSearch'],
-    long_description="Searches Google's book database and returns a URL for the book cover image",
+    install_requires=['requests'],
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Topic :: Utilities',
         'Programming Language :: Python :: 2.7',
         'License :: OSI Approved :: MIT License'
