@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='bookCoverSearch',
-    version=1.0.0,
+    version='1.0.0',
     author='Steven Scholnick',
     author_email='scholnicks@gmail.com',
     description="Searches Google's book database and returns a URL for the book cover image",
