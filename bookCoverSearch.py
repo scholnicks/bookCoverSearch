@@ -7,11 +7,15 @@ MIT License see http://www.scholnick.net/license.txt
 """
 
 import requests
-import urllib
 import re
 
-__all__ = ['bookCoverSearch','CoverPhoto']
+try:
+    from urllib import quote_plus as quote
+except ImportError:
+    from urllib.parse import quote
 
+
+__all__           = ['bookCoverSearch','CoverPhoto']
 GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?q="{0}"+inauthor:{1}&printType=books'
 
 
@@ -37,7 +41,7 @@ def canonicalForm(s):
 
 def bookCoverSearch(title=None,author=None):
     '''Searches for a book's cover based on a title and a single author'''
-    url = GOOGLE_SEARCH_URL.format(urllib.quote_plus(title),urllib.quote_plus(author))
+    url = GOOGLE_SEARCH_URL.format(quote(title),quote(author))
     data = requests.get(url).json()
 
     if 'items' not in data:
