@@ -2,3 +2,6 @@
 *.pyc
 *.pyo
 *.java
+bookCoverSearch.egg-info
+dist
+*.sh
