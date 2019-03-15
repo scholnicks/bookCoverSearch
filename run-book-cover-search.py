@@ -1,7 +1,6 @@
 #! /usr/bin/env python -B
 # -*- coding: utf-8 -*-
 
-from __future__ import print_function
 from bookCoverSearch import bookCoverSearch
 
 print(bookCoverSearch('Cujo','Stephen King'))

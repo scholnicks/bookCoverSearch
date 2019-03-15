@@ -3,7 +3,7 @@ bookCoverSearch takes a book title and single author and returns a link to the b
 only GoogleAPI is searched.
 
 (c) Steve Scholnick <scholnicks@gmail.com>
-MIT License see http://www.scholnick.net/license.txt
+MIT License see https://scholnick.net/license.txt
 """
 
 import requests

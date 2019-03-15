@@ -19,4 +19,4 @@ print(bookCoverSearch('Not Cujo','Not Stephen King'))
 
 &copy; Steve Scholnick <scholnicks@gmail.com>
 
-MIT License, see http://www.scholnick.net/license.txt
+MIT License, see https://scholnick.net/license.txt
