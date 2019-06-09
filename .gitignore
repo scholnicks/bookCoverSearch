@@ -2,6 +2,9 @@
 *.pyc
 *.pyo
 *.java
-bookCoverSearch.egg-info
+*.egg-info
 dist
 *.sh
+sample-data
+build
+MANIFEST
