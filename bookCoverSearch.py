@@ -8,12 +8,7 @@ MIT License see https://scholnick.net/license.txt
 
 import requests
 import re
-
-try:
-    from urllib import quote_plus as quote
-except ImportError:
-    from urllib.parse import quote
-
+from urllib.parse import quote
 
 __all__           = ['bookCoverSearch','CoverPhoto']
 GOOGLE_SEARCH_URL = 'https://www.googleapis.com/books/v1/volumes?q="{0}"+inauthor:{1}&printType=books'
